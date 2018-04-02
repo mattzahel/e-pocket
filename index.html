@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>ePocket</title>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="text-primary m-2">ePocket</h1>
+    <!-- Your account -->
+    <!-- <div class="card card-outline-primary">
+        <h3 class="card-header text-center" id="account-balance">Your account balance: 0$</h3>
+    </div> -->
+    <div class="card card-outline-primary pt-4 pl-4 pr-4 pb-2 mt-2 mb-2" id="transaction-card">
+    <h2 class="text-primary text-center mb-3">Add new transaction</h2>
+    <!-- FORM -->
+  <form id="cash-form" class="form-inline justify-content-center">
+    <!-- TYPE OF TRANSACTION INPUT -->
+    <label class="mr-2" for="type">Type</label>
+    <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="type">
+        <option placeholder>Type of transaction</option>
+        <option value="income" class="text-success">Income</option>
+        <option value="expense"class="text-danger">Expense</option>
+    </select>
+    <!-- TRANSACTION TITLE -->
+    <label class="sr-only" for="title">Title</label>
+    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+    <input type="text" class="form-control" id="title" placeholder="Transaction name" required>
+    </div>
+    <!-- AMOUNT OF MONEY INPUT -->
+    <label class="sr-only" for="money">Money</label>
+    <div class="input-group mb-2 mr-sm-2 mb-sm-0 moneyAmount">
+    <div class="input-group-addon">$</div>
+    <input type="number" class="form-control" id="money" placeholder="How much money?" required>
+    </div>
+
+    <!-- BUTTON -->
+    <button type="submit" class="btn btn-primary" id="btnAdd">Submit</button>
+  </form>
+  <div class="card bg-primary m-2 p-1 text-center text-white" id="addConfirm">Transaction added</div>
+  <div class="card bg-primary m-2 p-1 text-center text-white" id="removeConfirm">Transaction deleted</div>
+  
+</div>
+
+  <!-- SUMMARY DIVS -->
+  <div class="row">
+        <div class="col-sm-6">
+        <!-- INCOMES CARD -->
+            <div class="card card-success mb-2">
+                <h5 class="card-header text-white" id="card-incomes">
+                    Income <i class="fas fa-angle-down" id="icon-toggle1"></i>
+                </h5>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush" id="incomes-list">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+        <!-- EXPENSES CARD -->
+            <div class="card card-danger mb-2">
+                <h5 class="card-header text-white" id="card-expenses">
+                    Expense <i class="fas fa-angle-down" id="icon-toggle2"></i>
+                </h5>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush" id="expenses-list">
+                    </ul>
+                </div>
+            </div>       
+        </div>
+    </div>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+    <script src="toggle.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

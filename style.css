@@ -1,0 +1,28 @@
+#card-incomes, #card-expenses {
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+}
+
+#card-incomes:hover {
+    background-color: #4BA74B;
+}
+
+#card-expenses:hover {
+    background-color: #C8423E;
+}
+
+#addConfirm, #removeConfirm {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    #incomes-list, #expenses-list {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 568px) and (max-width: 992px) {
+    #btnAdd, .moneyAmount {
+        margin-top: 10px;
+    }
+}
