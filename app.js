@@ -50,10 +50,10 @@ class UI {
 document.getElementById('cash-form').addEventListener('submit', function(e){
     //Get form values
     const type = document.getElementById('type').value,
-            title = document.getElementById('title').value,
-            money = document.getElementById('money').value;
+          title = document.getElementById('title').value,
+          money = document.getElementById('money').value;
     
-    // Instantiate book
+    // Instantiate transaction
     const transaction = new moneyChange(type, title, money);
     
     // Instantiate UI
