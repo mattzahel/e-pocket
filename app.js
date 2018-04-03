@@ -33,7 +33,7 @@ class UI {
     }
     deleteExpense(target){
         if (target.className === 'ml-auto delete'){
-            target.parentElement.parentElement.remove();
+            target.parentElement.remove();
             $('#removeConfirm').fadeToggle(200).fadeToggle(4500);
         }
     }
